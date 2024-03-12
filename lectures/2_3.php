@@ -12,7 +12,7 @@ class User {
     }
 }
 
-// Instatiate a user object from user class
+// Instantiate a user object from user class
 $user1 = new User();
 $user1->name = 'John';
 echo $user1->name;
