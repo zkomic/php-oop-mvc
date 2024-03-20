@@ -8,6 +8,10 @@ class Pages extends Controller
 
     public function index()
     {
+        if (isLoggedIn()) {
+            redirect('posts');
+        }
+        
         $data = [
             'title' => 'SharePosts',
             'description' => 'Simple social network built on the Traversy MVC PHP Framework.'
@@ -21,7 +25,7 @@ class Pages extends Controller
         $data = [
             'title' => 'About Us',
             'description' => 'App to share posts with other users.'
-    ];
+        ];
         $this->view('pages/about', $data);
     }
 }
